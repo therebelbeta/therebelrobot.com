@@ -25,7 +25,8 @@ var paths = {
     templates:['source/templates/**/*.html'],
   },
   fonts:['source/assets/fonts/**'],
-  misc:['source/assets/misc/**']
+  misc:['source/assets/misc/**'],
+  orig:['source/Titan3_Media_files/**']
 };
 
 gulp.task('scripts-ours', function() {
@@ -66,6 +67,11 @@ gulp.task('copy-misc', function() {
   return gulp.src(paths.misc)
     .pipe(gulp.dest('build/misc'));
 });
+gulp.task('copy-orig', function() {
+  return gulp.src(paths.orig)
+    .pipe(gulp.dest('build/Titan3_Media_files'));
+});
+
 gulp.task('watch', function () {
   gulp.watch(paths.scripts.ours, ['scripts-ours']);
   gulp.watch(paths.scripts.lib, ['scripts-lib']);
@@ -75,6 +81,7 @@ gulp.task('watch', function () {
   gulp.watch(paths.html.index, ['copy-index']);
   gulp.watch(paths.fonts, ['copy-fonts']);
   gulp.watch(paths.misc, ['copy-misc']);
+  gulp.watch(paths.orig, ['copy-orig']);
 });
 // The default task (called when you run `gulp`)
 gulp.task('default', [
@@ -86,5 +93,6 @@ gulp.task('default', [
   'copy-index', 
   'copy-fonts', 
   'copy-misc',
+  'copy-orig',
   'watch'
 ]);
