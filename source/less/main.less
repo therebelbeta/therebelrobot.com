@@ -1,29 +1,272 @@
-/* *****************************
-main.sass
+/*yup*/
+ .gm-style .gm-style-mtc label, .gm-style .gm-style-mtc div {
+  font-weight:400
+}
+.gm-style .gm-style-cc span, .gm-style .gm-style-cc a, .gm-style .gm-style-mtc div {
+  font-size:10px
+}
+@import url('states/css.less');
+ @media print {
+  .gm-style .gmnoprint, .gmnoprint {
+    display:none
+  }
+}
+@media screen {
+  .gm-style .gmnoscreen, .gmnoscreen {
+    display:none
+  }
+}
+.gm-style {
+  font-family:Roboto, Arial, sans-serif;
+  font-size:11px;
+  font-weight:400;
+  text-decoration:none
+}
+@import url('states/css(1).less');
+ @import url('states/css(2).less');
+ @import url('states/styles.less');
+ @import url('states/settings.less');
+ .tp-caption a {
+  color:#ff7302;
+  text-shadow:none;
+  -webkit-transition:all 0.2s ease-out;
+  -moz-transition:all 0.2s ease-out;
+  -o-transition:all 0.2s ease-out;
+  -ms-transition:all 0.2s ease-out;
+}
+.tp-caption a:hover {
+  color:#ffa902;
+}
+@import url('states/dynamic-captions.less');
+ @import url('states/woocommerce-layout.less');
+ @import url('states/woocommerce-smallscreen.less');
 
-Rain CSS Coding Standards outlined at http://standards.mediarain.com/html-css
-
-Project: therebelrobot
-    
-****************************** */
-
-@import url('preboot.less');
-@import url('normalize.less');
-@import url('grid.less');
-
-@import url('fonts.less');
-@import url('mixins.less');
-@import url('colors.less');
-@import url('circle.less');
-
-
-
-@import url('generals.less');
-
-/* Directive Specific Styling */
-
-@import url('directives.less');
-
-/* Individual Sections */
-
-@import url('states.less');
+/*only screen and (max-width: 768px)*/
+ @import url('states/woocommerce.less');
+ @import url('states/css.php.less');
+ @import url('states/skeleton.less');
+ @import url('states/style.less');
+ @import url('states/social.less');
+ @import url('states/flexslider.less');
+ @import url('states/font-awesome.less');
+ @import url('states/prettyPhoto.less');
+ @import url('states/shortcodes.less');
+ @import url('states/theme.less');
+ @import url('states/media.less');
+ @import url('states/dark.less');
+ .fluid-width-video-wrapper {
+  width: 100%;
+  position: relative;
+  padding: 0;
+}
+.fluid-width-video-wrapper iframe, .fluid-width-video-wrapper object, .fluid-width-video-wrapper embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.recentcomments a {
+  display:inline !important;
+  padding:0 !important;
+  margin:0 !important;
+}
+#bg18 {
+  background: url('../img/parallax11.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+#bg51 {
+  background: url('../img/parallax-31.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+#bg58 {
+  background: url('../img/parallax-41.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+body {
+  font-family: Open Sans, Arial, Helvetica, sans-serif !important;
+  font-size: 13px;
+  font-style: normal;
+  color: #ffffff;
+  font-weight: normal;
+}
+h1 {
+  font-size: 80px;
+  font-style: normal;
+  color: #3b3f40;
+  font-weight: normal;
+  text-transform: none;
+}
+.contact-details h1 {
+  font-size: 80px !important;
+}
+h2 {
+  font-size: 36px;
+  font-style: normal;
+  color: #ffffff;
+  font-weight: normal;
+  text-transform: none;
+}
+h3 {
+  font-size: 20px;
+  font-style: normal;
+  color: #ffffff;
+  font-weight: normal;
+  text-transform: none;
+}
+h4 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  color: #3b3f40;
+}
+h5 {
+  font-size: 16px;
+  font-style: normal;
+  color: #3b3f40;
+  font-weight: normal;
+  text-transform: none;
+}
+h6 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  color: #ffffff;
+}
+.subtitle {
+  font-size: 25px;
+  font-style: normal;
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.home-parallax h1, .home-parallax h2, .home-parallax h3, .home-parallax h4, .home-parallax h5, .home-parallax h6, .home-fullscreenslider h1, .home-fullscreenslider h2, .home-fullscreenslider h3, .home-fullscreenslider h4, .home-fullscreenslider h5, .home-fullscreenslider h6, .home-video h1, .home-video h2, .home-video h3, .home-video h4, .home-video h5, .home-video h6, .parallax h1, .parallax h2, .parallax h3, .parallax h4, .parallax h5, .parallax h6, .parallax p.quote, .home-slide .home-slide-content, #slidecaption, .parallax .twitter-author a, .contact-details h2, .home3 h1 {
+  font-size: 45px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  color: #ffffff;
+}
+.home3 h1 {
+  width:420px;
+  margin:0 40px;
+}
+@media only screen and (max-width: 767px) {
+  .home3 h1 {
+    width: 380px;
+    margin:0 30px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .home3 h1 {
+    width: 220px;
+    margin:0 30px;
+  }
+}
+.home-logo-text a {
+}
+.home-parallax, .home-video, .parallax, .parallax #twitter-feed ul.slides > li, .parallax .testimonial-slide .client-testimonial, .slidedescription {
+  font-size: 16px;
+  font-style: normal;
+  color: #ffffff;
+}
+.navigation.colored li a, nav.light .main-menu a nav.transparent.scroll a, .page-template-default nav.transparent .main-menu a, .blog nav.transparent .main-menu a, nav.transparent.scroll .main-menu a {
+  font-family: Oswald, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  color: #242424;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+nav.transparent a {
+  font-family: Oswald, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.navigation li a:hover, .navigation li.active a, .navigation.colored li a:hover, .navigation.colored li.active a, .navigation li.current-menu-item a {
+  color: #42bb55 !important;
+}
+.navigation.transparent li.current-menu-item a, .navigation.transparent li.active a {
+  color: #42bb55 !important;
+}
+.copyright {
+  background: #42bb55 !important;
+  font-family: Open Sans, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  color: #ffffff;
+}
+.copyright a, .copyright .social-icons .social-icon {
+  color: #ffffff;
+}
+.copyright a:hover {
+  color: #000000;
+}
+#undefined-sticky-wrapper {
+  height: 0 !important;
+}
+.page-template-default .title, .blog .title {
+  margin-top:80px;
+}
+/*========== B A C K G R O U N D    S K I N S =============*/
+ ::-moz-selection {
+  background: #42bb55;
+}
+::selection {
+  background:#42bb55;
+}
+nav.colored, nav.light.colored, .twitter-feed-icon i, .testimonial-icon i, .home-gradient, .home-parallax, #project-navigation ul li#prevProject a:hover, #project-navigation ul li#nextProject a:hover, #project-navigation ul li a:hover, #closeProject a:hover, .mc4wp-form input[type="submit"], #respond input[type="submit"], input[type="submit"], .pagination a.previous:hover, .pagination a.next:hover, .service-box:hover, .button, .skillbar .skill-percentage, .flex-control-nav li a:hover, .flex-control-nav li a.flex-active, .testimonial-slider .flex-direction-nav li a:before, .twitter-slider .flex-direction-nav li a:before, .color-block, .home1 .slabtextdone .slabtext.second-child, .home4 .slabtextdone .slabtext.second-child, .caption, .copyright, .title h1, .service-features .img-container, .service-features .img-container, .view-profile, .team-member:hover .team-desc, .service-box .service-icon, .modal .close, #nav .sub-menu li.current-menu-item a, #nav .sub-menu li.current-menu-item a:hover, #nav .sub-menu li.current_page_item a, #nav .sub-menu li.current_page_item a:hover, #nav .sub-menu li .sub-menu li.current-menu-item a, #nav .sub-menu li .sub-menu li.current-menu-item a:hover, #nav .sub-menu li .sub-menu li.current_page_item a, #nav .sub-menu li .sub-menu li.current_page_item a:hover, #nav .sub-menu li a.active, #nav .sub-menu li a.active:hover, #port-pagination a:hover, #respond input[type="submit"], .woocommerce #respond input#submit, .woocommerce ul.products li.product a.button, .woocommerce-page ul.products li.product a.button, .woocommerce div.product form.cart .button, .woocommerce-page .woocommerce-message .button, .woocommerce .cart-collaterals .shipping_calculator .button, .woocommerce-page .cart-collaterals .shipping_calculator .button, .woocommerce .login input.button, .woocommerce .checkout_coupon input.button, .woocommerce .cart input.button.alt, .woocommerce .login input.button, .woocommerce .checkout_coupon input.button, .woocommerce #respond input#submit:hover, .woocommerce-page .woocommerce-message .button:hover, .woocommerce button.button.alt, .woocommerce a.wc-backward, .woocommerce a.wc-backward:hover, .woocommerce #payment #place_order, .woocommerce-page #payment #place_order, .woocommerce #payment #place_order:hover, .woocommerce-page #payment #place_order:hover, .woocommerce .widget_price_filter .ui-slider .ui-slider-range, .woocommerce-page .widget_price_filter .ui-slider .ui-slider-range, .latest-blog .blog-item .inner:hover .blog-item-description .desc.post-icon, .blog .blog-overlay, .latest-blog .blog-item .blog-item-description span.date, div.wpcf7 div.stretch-submit input[type="submit"] {
+  background-color: #42bb55;
+}
+/*========== B O X   S H A D O W    S K I N S =============*/
+ .title h1, .service-box .service-icon {
+  box-shadow:0px 0px 0px 3px #42bb55;
+}
+.tab a.selected {
+  box-shadow: 0px -3px 0px 0px #42bb55;
+}
+/*========== C O L O R    S K I N S =============*/
+ a, .highlight, nav.light .main-menu a:hover, nav.dark .main-menu a:hover, nav.light .main-menu li.active a, nav.transparent .main-menu li.active a, nav.dark .main-menu li.active a, .parallax .quote i, #filters ul li a:hover h3, #filters ul li a.active h3, .post-title a:hover, .post-tags li a:hover, .tags-list li a:hover, .pages li a:hover, .home3 .slabtextdone .slabtext.second-child, .service-box:hover .service-icon, span.amount, #nav .sub-menu li a:hover, #nav .sub-menu li .sub-menu li a:hover, #nav .sub-menu li .sub-menu li .sub-menu li a:hover {
+  color:#42bb55;
+}
+/*========== B O R D E R    S K I N S =============*/
+ .pages li a.current, .pages li a.current, .service-features .img-container:after, .service-box:hover .service-icon, .callout, blockquote p, .pullquote.align-right, .pullquote.align-left {
+  border-color: #42bb55;
+}
+div.main-menu-wrapper nav.colored {
+  background-color: #ffffff;
+}
+div#home div.overlay {
+  background-image: none;
+}
+.service-features h3 {
+  color: #3b3f40;
+}
+#about {
+  padding-top:165px;
+}
+@-webkit-keyframes _gm7571 {
+  0% {
+    -webkit-transform: translate3d(0px, -500px, 0);
+    -webkit-animation-timing-function: ease-in;
+  }
+  50% {
+    -webkit-transform: translate3d(0px, 0px, 0);
+    -webkit-animation-timing-function: ease-out;
+  }
+  75% {
+    -webkit-transform: translate3d(0px, -20px, 0);
+    -webkit-animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translate3d(0px, 0px, 0);
+    -webkit-animation-timing-function: ease-out;
+  }
+}
