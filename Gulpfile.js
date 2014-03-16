@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var less = require('gulp-less');
+var uncss = require('gulp-uncss');
 
 var paths = {
   scripts: {
@@ -42,11 +43,17 @@ gulp.task('scripts-lib', function() {
 });
 gulp.task('styles-ours', function () {
   return gulp.src(paths.styles.ours)
-    .pipe(less())
+    .pipe(less())    
+    .pipe(uncss({
+        html: [paths.html.index]
+      }))
     .pipe(gulp.dest('build/css'));
 });
 gulp.task('styles-lib', function () {
   return gulp.src(paths.styles.lib)
+    .pipe(uncss({
+        html: [paths.html.index]
+      }))
     .pipe(concat("lib.css"))
     .pipe(gulp.dest('build/css'));
 });
