@@ -26,36 +26,32 @@ var paths = {
     templates:['source/templates/**/*.html'],
   },
   fonts:['source/assets/fonts/**'],
-  misc:['source/assets/misc/**'],
-  orig:['source/Titan3_Media_files/**']
+  misc:['source/assets/misc/**']
 };
 
 gulp.task('scripts-ours', function() {
-  return gulp.src(paths.scripts.ours)
-    .pipe(concat("main.js"))
-    .pipe(uglify())
-    .pipe(gulp.dest('build/js'));
+  // return gulp.src(paths.scripts.ours)
+  //   .pipe(concat("main.js"))
+  //   .pipe(uglify())
+  //   .pipe(gulp.dest('build/js'));
 });
 gulp.task('scripts-lib', function() {
-  return gulp.src(paths.scripts.lib)
-    .pipe(concat("lib.js"))
-    .pipe(gulp.dest('build/js'));
+  // return gulp.src(paths.scripts.lib)
+  //   .pipe(concat("lib.js"))
+  //   .pipe(gulp.dest('build/js'));
 });
 gulp.task('styles-ours', function () {
   return gulp.src(paths.styles.ours)
-    .pipe(less())    
-    .pipe(uncss({
-        html: [paths.html.index]
-      }))
+    .pipe(less())
     .pipe(gulp.dest('build/css'));
 });
 gulp.task('styles-lib', function () {
-  return gulp.src(paths.styles.lib)
-    .pipe(uncss({
-        html: [paths.html.index]
-      }))
-    .pipe(concat("lib.css"))
-    .pipe(gulp.dest('build/css'));
+  // return gulp.src(paths.styles.lib)
+  //   .pipe(uncss({
+  //       html: [paths.html.index]
+  //     }))
+  //   .pipe(concat("lib.css"))
+  //   .pipe(gulp.dest('build/css'));
 });
 // Copy all static assets
 gulp.task('copy-img', function() {
@@ -74,10 +70,6 @@ gulp.task('copy-misc', function() {
   return gulp.src(paths.misc)
     .pipe(gulp.dest('build/misc'));
 });
-gulp.task('copy-orig', function() {
-  return gulp.src(paths.orig)
-    .pipe(gulp.dest('build/Titan3_Media_files'));
-});
 
 gulp.task('watch', function () {
   gulp.watch(paths.scripts.ours, ['scripts-ours']);
@@ -88,18 +80,16 @@ gulp.task('watch', function () {
   gulp.watch(paths.html.index, ['copy-index']);
   gulp.watch(paths.fonts, ['copy-fonts']);
   gulp.watch(paths.misc, ['copy-misc']);
-  gulp.watch(paths.orig, ['copy-orig']);
 });
 // The default task (called when you run `gulp`)
 gulp.task('default', [
-  'scripts-lib', 
-  'scripts-ours', 
-  'styles-lib', 
+  // 'scripts-lib', 
+  // 'scripts-ours', 
+  // 'styles-lib', 
   'styles-ours', 
   'copy-img', 
   'copy-index', 
   'copy-fonts', 
   'copy-misc',
-  'copy-orig',
   'watch'
 ]);
