@@ -16,6 +16,28 @@ body{
     font-size:10rem;
   }
 }
+input, textarea, select, button{
+  width:100%;
+  padding:0.5rem 1rem;
+  border-radius:0.5rem;
+  margin-top:1rem;
+  border:1px solid @orange;
+  background:@white;
+  outline: none;
+  font-size:0.75rem;
+  &:focus{
+    -webkit-box-shadow: 0 0 0.5rem 0 @orange;
+    box-shadow: 0 0 0.5rem 0 @orange;
+  }
+}
+button{
+  color:@orange;
+  font-weight:bold;
+  text-transform:uppercase;
+  }
+  textarea{
+  min-height:6rem;
+  }
 section{
   position:relative;
   & > .icon.title{
@@ -38,7 +60,10 @@ section{
       line-height:4.5rem;
       &.fa-tachometer{
         line-height:4rem;
-
+      }
+      &.fa-chain{
+        padding-right: 0.1rem;
+        line-height:5rem;
       }
     }
   }
