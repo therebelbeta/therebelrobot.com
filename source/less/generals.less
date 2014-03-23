@@ -4,15 +4,65 @@ body{
     font-family:@joseph;
   }
 }
-
+.fa{
+  &.small{
+    font-size:3rem;
+    line-height: 4.5rem;
+  }
+  &.medium{
+    font-size:5rem;
+  }
+  &.big{
+    font-size:10rem;
+  }
+}
 section{
+  position:relative;
+  & > .icon.title{
+    display:block;
+    width:5rem;
+    text-align:center;
+    height:5rem;
+    line-height:5rem;
+    border-radius:3rem;
+    border-size:1px;
+    border-style:solid;
+    position:absolute;
+    top:-2.5rem;
+    left:50%;
+    margin-left:-2.5rem;
+    .fa{
+      width:100%;
+      height:100%;
+      text-align:center;
+      line-height:4.5rem;
+      &.fa-tachometer{
+        line-height:4rem;
+
+      }
+    }
+  }
   &.white{
     background-color:@white;
     color:@darktext;
+    & > .icon.title{
+      background:@white;
+      color:@orange;
+      border-color:@orange;
+      -webkit-box-shadow: 0 0 0 0.5rem @white;
+      box-shadow: 0 0 0 0.5rem @white;
+    }
   }
   &.orange{
     background-color:@orange;
     color:@white;
+    & > .icon.title{
+      background:@orange;
+      color:@white;
+      border-color:@white;
+      -webkit-box-shadow: 0 0 0 0.5rem @orange;
+      box-shadow: 0 0 0 0.5rem @orange;
+    }
   }
   &.para{
     background-color:@lightgray;
