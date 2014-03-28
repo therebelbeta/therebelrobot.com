@@ -1,0 +1,85 @@
+section.about{
+  .meimage{
+    position:relative;
+    .outerGif {
+      margin-top:50px;
+      display:inline-block;
+      position:relative;
+      background: url(http://25.media.tumblr.com/5418e6c686175c0b3aea39d7727b84ef/tumblr_meo0yqcCtj1qe3gjbo1_500.gif);
+      border-radius:50%;
+      background-size:cover;
+      width:300px; height:300px;
+      overflow:hidden;
+      /* Fix webkit rendering bug */
+      -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+    }
+    .innerGif {
+      position: absolute;
+      left: 8%;
+      bottom: 43%;
+      width: 126%;
+      height: 49%;
+      overflow: hidden;
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    .innerGif .innerimage {
+      height: 98%;
+      width: 102%;
+      background: url(http://24.media.tumblr.com/tumblr_mci1jadFoh1rn4fwio1_500.gif) center center;
+      background-size: cover;
+    }
+    .gifoverlay {
+      position:absolute;
+      top:50%; left:50%;
+      margin-top:-75px; margin-left:-75px;
+      width:150px; height:150px;
+      background:white;
+      border-radius:50%;
+    }
+    .gifoverlay:before {
+     content: '';
+      position: absolute;
+      width: 185%;
+      height: 185%;
+      border-radius: 50%;
+      margin-top: -65px;
+      margin-left: -138px;
+      border: 7px solid white;
+    }
+    .gifoverlay .innerimage {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 140px;
+      height: 140px;
+      overflow: hidden;
+      border-radius: 120px;
+      background: url(../img/trent.jpg) center center;
+      background-size: cover;
+      margin-top: -70px;
+      margin-left: -70px;
+
+    }
+    .gifoverlay .innerimage:before {
+      content:''; 
+      position:absolute;
+      left:-80%;
+      height:120%; width:80%;
+      background:white;
+      transform-origin:top right;
+      transform:rotate(-33deg);
+    }
+    .gifoverlay .innerimage:after {
+      content:''; position:absolute;
+      right:-80%;
+      height:120%; width:80%;
+      background:white;
+      transform-origin:top left;
+      transform:rotate(33deg);
+    }
+  }
+}
