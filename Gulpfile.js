@@ -11,7 +11,10 @@ var paths = {
       '!source/js/lib/**'
     ],
     lib:[
-      'bower_modules/jquery/dist/jquery.min.js',
+      'bower_modules/jquery/dist/jquery.js',
+      'bower_modules/vue/dist/vue.js',
+      'bower_modules/smoothscroll/dist/smoothscroll.js',
+      'bower_modules/scroll-reveal/dist/scrollReveal.min.js',
       'source/js/lib/**/*.js'
     ]
   },
@@ -30,15 +33,15 @@ var paths = {
 };
 
 gulp.task('scripts-ours', function() {
-  // return gulp.src(paths.scripts.ours)
-  //   .pipe(concat("main.js"))
-  //   .pipe(uglify())
-  //   .pipe(gulp.dest('build/js'));
+  return gulp.src(paths.scripts.ours)
+    .pipe(concat("main.js"))
+    .pipe(uglify())
+    .pipe(gulp.dest('build/js'));
 });
 gulp.task('scripts-lib', function() {
-  // return gulp.src(paths.scripts.lib)
-  //   .pipe(concat("lib.js"))
-  //   .pipe(gulp.dest('build/js'));
+  return gulp.src(paths.scripts.lib)
+    .pipe(concat("lib.js"))
+    .pipe(gulp.dest('build/js'));
 });
 gulp.task('styles-ours', function () {
   return gulp.src(paths.styles.ours)
@@ -83,8 +86,8 @@ gulp.task('watch', function () {
 });
 // The default task (called when you run `gulp`)
 gulp.task('default', [
-  // 'scripts-lib', 
-  // 'scripts-ours', 
+  'scripts-lib', 
+  'scripts-ours', 
   // 'styles-lib', 
   'styles-ours', 
   'copy-img', 

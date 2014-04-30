@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta charset="UTF-8">
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
+  <script type="text/javascript" src="js/lib.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
   <!-- <link href="css/lib.css" rel="stylesheet" type="text/css"> -->
   <link href="css/main.css" rel="stylesheet" type="text/css">
 
 </head>
-<body>
+<body id="v-app">
   <div class="preloader">
 
   </div>
@@ -73,44 +74,44 @@
       </div>
       <div class="row clearfix">
         <div class="column half">
-            <div class="img adobe">
+            <div class="img adobe" v-on="click:modalOpen=true">
               <div class="darken"></div>
               <h3>ANALYTICS ASSESMENT</h3>
               <h4>ADOBE</h4>
             </div>
-            <div class="img martha">
+            <div class="img martha" v-on="click:modalOpen=true">
               <div class="darken"></div>
               <h3>WALL CONFIGURATOR</h3>
               <h4>MARTHA STEWART / AVERY</h4>
             </div>
-            <div class="img estee">
+            <div class="img estee" v-on="click:modalOpen=true">
               <div class="darken"></div>
               <h3>THE BEAUTY OF NIGHT</h3>
               <h4>ESTEE LAUDER</h4>
             </div>
-            <div class="img nrf">
+            <div class="img nrf" v-on="click:modalOpen=true">
               <div class="darken"></div>
               <h3>NRF.COM</h3>
               <h4>NATIONAL RETAIL FEDERATION</h4>
             </div>
           </div>
           <div class="column half">
-            <div class="img ngless">
+            <div class="img ngless" v-on="click:modalOpen=true">
               <div class="darken"></div>
               <h3>NGLESS GENERATOR</h3>
               <h4>YEOMAN / ANGULAR</h4>
             </div>
-            <div class="img maraca">
+            <div class="img maraca" v-on="click:modalOpen=true">
               <div class="darken"></div>
               <h3>MARACA</h3>
               <h4>VUE / CSS3 / RESPONSIVE</h4>
             </div>
-            <div class="img octostar">
+            <div class="img octostar" v-on="click:modalOpen=true">
               <div class="darken"></div>
               <h3>OCTOSTAR</h3>
               <h4>MONGO / SASS / VUE / NODE</h4>
             </div>
-            <div class="img peel">
+            <div class="img peel" v-on="click:modalOpen=true">
               <div class="darken"></div>
               <h3>PEEL</h3>
               <h4>MONGO / STYLUS / ANGULAR / NODE</h4>
@@ -339,10 +340,13 @@
       footer
     </section>
     <!-- Modal overlay -->
-    <div class="modal">
-      <div class="modal-bg"></div>  
-      <div class="modal-body"></div>
+    <div class="modal" v-show="modalOpen">
+      <div class="modal-bg" data-open="{{modalOpen}}" v-on="click:modalOpen=false"></div>
+      <div class="modal-container column three-fourth" data-open="{{modalOpen}}">
+        <h1>test</h1>
+      </div>
     </div>
   </div>
+  
 </body>
 </html>
