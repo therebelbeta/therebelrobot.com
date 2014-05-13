@@ -1,4 +1,4 @@
 ttr-mar14
 =========
 
-Newbie site
+This is the source code for therebelrobot.com, as of March-May 2014
