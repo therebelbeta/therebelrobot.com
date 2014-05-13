@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta charset="UTF-8">
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <script type="text/javascript" src="js/lib.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
   <!-- <link href="css/lib.css" rel="stylesheet" type="text/css"> -->
@@ -17,7 +19,7 @@
   </div>
   <div class="container">
     <!-- Toolbar - sticky -->
-    <nav>
+  <!--   <nav>
       <div class="row clearfix">
         <div class="logo column half">
           theRebelRobot Development
@@ -31,7 +33,7 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> -->
     <!-- #Welcome - image -->
     <section id="welcome" class="welcome para">
       <div class="inner">
@@ -96,29 +98,29 @@
             </div>
           </div>
           <div class="column half">
-            <div class="img ngless" v-on="click:openModal('ngless',this)">
+            <div class="img ngless" v-on="click:openWindow('ngless',this)">
               <div class="darken"></div>
               <h3>NGLESS GENERATOR</h3>
               <h4>YEOMAN / ANGULAR</h4>
             </div>
-            <div class="img maraca" v-on="click:openModal('maraca',this)">
+            <div class="img maraca" v-on="click:openWindow('maraca',this)">
               <div class="darken"></div>
               <h3>MARACA</h3>
               <h4>VUE / CSS3 / RESPONSIVE</h4>
             </div>
-            <div class="img octostar" v-on="click:openModal('octostar',this)">
+            <div class="img octostar" v-on="click:openWindow('octostar',this)">
               <div class="darken"></div>
               <h3>OCTOSTAR</h3>
               <h4>MONGO / SASS / VUE / NODE</h4>
             </div>
-            <div class="img peel" v-on="click:openModal('peel',this)">
+            <div class="img peel" v-on="click:openWindow('peel',this)">
               <div class="darken"></div>
               <h3>PEEL</h3>
               <h4>MONGO / STYLUS / ANGULAR / NODE</h4>
             </div>
         </div>
         <div class="column full">
-          <div class="img trr" v-on="click:openModal('trr',this)">
+          <div class="img trr" v-on="click:openWindow('trr',this)">
             <div class="darken"></div>
             <h3>THEREBELROBOT.COM</h3>
             <h4>LESS / VUE / NODE</h4>
@@ -279,7 +281,7 @@
       </div>
     </section>
     <!-- blog - orange -->
-    <section class="twitter orange">
+    <!-- <section class="twitter orange">
       <div id="blog" class="icon title">
         <i class="fa fa-twitter small"></i>
       </div>
@@ -297,9 +299,9 @@
           <h4><em>Time Stamp</em></h4>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- #contact - white -->
-    <section class="contact white">
+<!--     <section class="contact white">
       <div id="contact" class="icon title">
         <i class="fa fa-envelope-o small"></i>
       </div>
@@ -331,13 +333,30 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- footer - orange -->
     <section class="footer orange">
       <div class="icon title">
         <i class="fa fa-chain small"></i>
       </div>
-      footer
+
+      <div class="row clearfix">
+        <div class="column full">
+          <a href="http://github.com/therebelrobot" ><img src="img/share/github.png" /></a>
+          <a href="http://linkedin.com/profile/view?id=62388992" ><img src="img/share/linkedin.png" /></a>
+          <a href="http://coderwall.com/therebelrobot" ><img src="img/share/coderwall.png" /></a>
+          <a href="http://twitter.com/therebelrobot" ><img src="img/share/twitter.png" /></a>
+          <a href="mailto:trentoswald@therebelrobot.com" v-on="click:showEmail=true"><img src="img/share/email.png" /></a>
+        </div>
+      </div>
+
+      <div class="row clearfix">
+        <div class="column full">
+          <p>Brought to you by countless forest gnomes working tirelessly in the night.</p>
+          <p>&copy; Trent Oswald 2014</p>
+        </div>
+
+      </div>
     </section>
     <div class="tldr">
       <a href="http://therebelrobot.github.io/">TL;DR? Short version here.</a>
@@ -394,7 +413,6 @@
             </div>
             <div class="column half">
               <img src="img/screenshots/martha3.png" />
-              <img src="img/screenshots/martha4.png" />
             </div>
           </div>
         </div>
@@ -475,10 +493,10 @@
               <img src="img/screenshots/adobe-home-page.jpg" />
             </div>
             <div class="column half">
-              <h3>Analytics Maturity Assessment</h3>
-              <h4>Adobe</h4>
-              <h4 class="tag">Delivered</h4>
-              <h4>jQuery / CSS3 / jQuery Mobile</h4>
+              <h3>NgLess</h3>
+              <h4>Yoeman Generator</h4>
+              <h4 class="tag">Released</h4>
+              <h4>NodeJS / AngularJS / LessCSS</h4>
             </div>
           </div>
           <div class="row clearfix">
