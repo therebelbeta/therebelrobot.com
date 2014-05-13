@@ -51,19 +51,19 @@
       </div>
       <div class="row clearfix">
         <div class="column third">
-          <i class="fa fa-crosshairs big"></i>
-          <h3>Architect, not Developer</h3>
+          <i class="fa fa-crop big"></i>
+          <h3>More than Developer: Architect</h3>
           <p>A developer writes code. An architect sees the whole picture; how UX, designs, data structures and code interact and play into each other. A beautiful user experience requires more than syntactic finesse.</p>
-        </div>
-        <div class="column third">
-          <i class="fa fa-mobile big"></i>
-          <h3>Responsive &amp; Adaptive Coding</h3>
-          <p>Websites are no longer a desktop affair. Modern design requires a mobile-first mentality, to ensure the maximum amount of users can utilize that beautiful code you're producing.</p>
         </div>
         <div class="column third">
           <i class="fa fa-html5 big"></i>
           <h3>Cutting Edge Expertise</h3>
           <p>New technology is being developed daily. Innovative design should be leveraged anytime possible, and unless a developer stays on top of current trends, he could end up being left behind.</p>
+        </div>
+        <div class="column third">
+          <i class="fa fa-mobile big"></i>
+          <h3>Responsive &amp; Adaptive Coding</h3>
+          <p>Websites are no longer a desktop affair. Modern design requires a mobile-first mentality, to ensure the maximum amount of users can utilize that beautiful code you're producing.</p>
         </div>
       </div>
     </section>
@@ -74,51 +74,51 @@
       </div>
       <div class="row clearfix">
         <div class="column half">
-            <div class="img adobe" v-on="click:modalOpen=true">
+            <div class="img adobe" v-on="click:openModal('adobe',this)">
               <div class="darken"></div>
               <h3>ANALYTICS ASSESMENT</h3>
               <h4>ADOBE</h4>
             </div>
-            <div class="img martha" v-on="click:modalOpen=true">
+            <div class="img martha" v-on="click:openModal('martha',this)">
               <div class="darken"></div>
               <h3>WALL CONFIGURATOR</h3>
               <h4>MARTHA STEWART / AVERY</h4>
             </div>
-            <div class="img estee" v-on="click:modalOpen=true">
+            <div class="img estee" v-on="click:openModal('estee',this)">
               <div class="darken"></div>
               <h3>THE BEAUTY OF NIGHT</h3>
               <h4>ESTEE LAUDER</h4>
             </div>
-            <div class="img nrf" v-on="click:modalOpen=true">
+            <div class="img nrf" v-on="click:openModal('nrf',this)">
               <div class="darken"></div>
               <h3>NRF.COM</h3>
               <h4>NATIONAL RETAIL FEDERATION</h4>
             </div>
           </div>
           <div class="column half">
-            <div class="img ngless" v-on="click:modalOpen=true">
+            <div class="img ngless" v-on="click:openModal('ngless',this)">
               <div class="darken"></div>
               <h3>NGLESS GENERATOR</h3>
               <h4>YEOMAN / ANGULAR</h4>
             </div>
-            <div class="img maraca" v-on="click:modalOpen=true">
+            <div class="img maraca" v-on="click:openModal('maraca',this)">
               <div class="darken"></div>
               <h3>MARACA</h3>
               <h4>VUE / CSS3 / RESPONSIVE</h4>
             </div>
-            <div class="img octostar" v-on="click:modalOpen=true">
+            <div class="img octostar" v-on="click:openModal('octostar',this)">
               <div class="darken"></div>
               <h3>OCTOSTAR</h3>
               <h4>MONGO / SASS / VUE / NODE</h4>
             </div>
-            <div class="img peel" v-on="click:modalOpen=true">
+            <div class="img peel" v-on="click:openModal('peel',this)">
               <div class="darken"></div>
               <h3>PEEL</h3>
               <h4>MONGO / STYLUS / ANGULAR / NODE</h4>
             </div>
         </div>
         <div class="column full">
-          <div class="img trr">
+          <div class="img trr" v-on="click:openModal('trr',this)">
             <div class="darken"></div>
             <h3>THEREBELROBOT.COM</h3>
             <h4>LESS / VUE / NODE</h4>
@@ -151,7 +151,7 @@
         <div class="column third">
           <p>Life is too short to run proprietary software. ~ Bdale Garbee</p>
           <p>
-            I write open source. I love collaborating to define, design, and implement software that meets the needs of the project, no matter the scope. I learned via open source technologies, and I like to return the favor in the code I write.
+            I write open source. I love collaborating to define, design, and implement software that meets the needs of the project, no matter the scope.
           </p>
         </div>
         <div class="column two-thirds">
@@ -343,10 +343,253 @@
     <div class="modal" v-show="modalOpen">
       <div class="modal-bg" data-open="{{modalOpen}}" v-on="click:modalOpen=false"></div>
       <div class="modal-container column three-fourth" data-open="{{modalOpen}}">
-        <h1>test</h1>
+        <div class="modal-content" id="adobe" v-show="modalType === 'adobe'">
+          <div class="row clearfix">
+            <div class="column half">
+              <img src="img/screenshots/adobe-home-page.jpg" />
+            </div>
+            <div class="column half">
+              <h3>Analytics Maturity Assessment</h3>
+              <h4>Adobe</h4>
+              <h4 class="tag">Delivered</h4>
+              <h4>jQuery / CSS3 / jQuery Mobile</h4>
+            </div>
+          </div>
+          <div class="row clearfix">
+            <div class="column full">
+              <p>Built the Javascript MVC architecture from scratch, internationalization, whitelabeling, offline functionality, font support.</p>
+            </div>
+            <div class="column half">
+              <img src="img/screenshots/adobe-analytics1.png" />
+              <img src="img/screenshots/adobe-analytics2.png" />
+            </div>
+            <div class="column half">
+              <img src="img/screenshots/adobe-analytics3.png" />
+              <img src="img/screenshots/adobe-analytics4.png" />
+            </div>
+          </div>
+        </div>
+        <div class="modal-content" id="martha" v-show="modalType === 'martha'">
+          <div class="row clearfix">
+            <div class="column half">
+              <img src="img/screenshots/martha-logo.jpg" />
+            </div>
+            <div class="column half">
+              <h3>Wall Configurator</h3>
+              <h4>Martha Stewart Home Collection / Avery / Staples</h4>
+              <h4 class="tag">Delivered</h4>
+              <h4>jQuery / CSS3 / jQuery UI</h4>
+            </div>
+          </div>
+          <div class="row clearfix">
+            <div class="column full">
+              <p>Architected, constructed and maintained javascript framework. Drag and drop functionality down to IE8, integration with Staples cart API, localization.</p>
+            </div>
+            <div class="column half">
+              <img src="img/screenshots/martha1.png" />
+              <img src="img/screenshots/martha2.png" />
+            </div>
+            <div class="column half">
+              <img src="img/screenshots/martha3.png" />
+              <img src="img/screenshots/martha4.png" />
+            </div>
+          </div>
+        </div>
+        <div class="modal-content" id="estee" v-show="modalType === 'estee'">
+          <div class="row clearfix">
+            <div class="column half">
+              <img src="img/screenshots/estee-logo.jpg" />
+            </div>
+            <div class="column half">
+              <h3>The Beauty of Night</h3>
+              <h4>Estee Lauder</h4>
+              <h4 class="tag">Delivered</h4>
+              <h4>jQuery / EmberJS / LESS/CSS3 / HTML5</h4>
+            </div>
+          </div>
+          <div class="row clearfix">
+            <div class="column full">
+              <p>
+                http://www.thebeautyofnight.com/_efb/beautyofnight/
+              </p>
+              <p>
+                Built the Javascript architecture, Internationalization, Font support, AJAX page loading, Backward compatibility to IE8, Facebook / Instagram / Twitter / Weibo / Renren integration. 
+              </p>
+            </div>
+            <div class="column half">
+              <img src="img/screenshots/estee1.png" />
+              <img src="img/screenshots/estee2.png" />
+
+              <img src="img/screenshots/estee3.png" />
+              <img src="img/screenshots/estee4.png" />
+            </div>
+            <div class="column half">
+              <img src="img/screenshots/estee5.png" />
+              <img src="img/screenshots/estee6.png" />
+
+              <img src="img/screenshots/estee7.png" />
+              <img src="img/screenshots/estee8.png" />
+            </div>
+          </div>
+        </div>
+        <div class="modal-content" id="nrf" v-show="modalType === 'nrf'">
+          <div class="row clearfix">
+            <div class="column half">
+              <img src="img/screenshots/nrf-logo.png" />
+            </div>
+            <div class="column half">
+              <h3>NRF.COM</h3>
+              <h4>National Retail Federation</h4>
+              <h4 class="tag">Pre-delivery</h4>
+              <h4>SASS CSS3 / Gulp / Responsive</h4>
+            </div>
+          </div>
+          <div class="row clearfix">
+            <div class="column full">
+              <p>Built the mobile styling for the entire site, Sass pre-processing, Gulp.js for deployment. Worked onsite at the NRF headquarters in Washington DC to ensure proper deployment of site.</p>
+            </div>
+            <div class="row clearfix">
+              <div class="column half">
+                <img src="img/screenshots/nrf1.jpg" />
+              </div>
+              <div class="column half">
+                <img src="img/screenshots/nrf4.jpg" />
+              </div>
+            </div>
+            <div class="row clearfix">
+              <div class="column half">
+                <img src="img/screenshots/nrf2.jpg" />
+              </div>
+              <div class="column half">
+                <img src="img/screenshots/nrf3.jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content" id="ngless" v-show="modalType === 'ngless'">
+          <div class="row clearfix">
+            <div class="column half">
+              <img src="img/screenshots/adobe-home-page.jpg" />
+            </div>
+            <div class="column half">
+              <h3>Analytics Maturity Assessment</h3>
+              <h4>Adobe</h4>
+              <h4 class="tag">Delivered</h4>
+              <h4>jQuery / CSS3 / jQuery Mobile</h4>
+            </div>
+          </div>
+          <div class="row clearfix">
+            <div class="column full">
+              <p>Built the Javascript MVC architecture from scratch, internationalization, whitelabeling, offline functionality, font support.</p>
+            </div>
+            <div class="column half">
+              <img src="img/screenshots/adobe-analytics1.png" />
+              <img src="img/screenshots/adobe-analytics2.png" />
+            </div>
+            <div class="column half">
+              <img src="img/screenshots/adobe-analytics3.png" />
+              <img src="img/screenshots/adobe-analytics4.png" />
+            </div>
+          </div>
+        </div>
+        <div class="modal-content" id="maraca" v-show="modalType === 'maraca'">
+          <div class="row clearfix">
+            <div class="column half">
+              <img src="img/screenshots/adobe-home-page.jpg" />
+            </div>
+            <div class="column half">
+              <h3>Analytics Maturity Assessment</h3>
+              <h4>Adobe</h4>
+              <h4 class="tag">Delivered</h4>
+              <h4>jQuery / CSS3 / jQuery Mobile</h4>
+            </div>
+          </div>
+          <div class="row clearfix">
+            <div class="column full">
+              <p>Built the Javascript MVC architecture from scratch, internationalization, whitelabeling, offline functionality, font support.</p>
+            </div>
+            <div class="column half">
+              <img src="img/screenshots/adobe-analytics1.png" />
+              <img src="img/screenshots/adobe-analytics2.png" />
+            </div>
+            <div class="column half">
+              <img src="img/screenshots/adobe-analytics3.png" />
+              <img src="img/screenshots/adobe-analytics4.png" />
+            </div>
+          </div>
+        </div>
+        <div class="modal-content" id="octostar" v-show="modalType === 'octostar'">
+          <div class="row clearfix">
+            <div class="column half">
+              <img src="img/screenshots/adobe-home-page.jpg" />
+            </div>
+            <div class="column half">
+              <h3>Analytics Maturity Assessment</h3>
+              <h4>Adobe</h4>
+              <h4 class="tag">Delivered</h4>
+              <h4>jQuery / CSS3 / jQuery Mobile</h4>
+            </div>
+          </div>
+          <div class="row clearfix">
+            <div class="column full">
+              <p>Built the Javascript MVC architecture from scratch, internationalization, whitelabeling, offline functionality, font support.</p>
+            </div>
+            <div class="column half">
+              <img src="img/screenshots/adobe-analytics1.png" />
+              <img src="img/screenshots/adobe-analytics2.png" />
+            </div>
+            <div class="column half">
+              <img src="img/screenshots/adobe-analytics3.png" />
+              <img src="img/screenshots/adobe-analytics4.png" />
+            </div>
+          </div>
+        </div>
+        <div class="modal-content" id="peel" v-show="modalType === 'peel'">
+          <div class="row clearfix">
+            <div class="column half">
+              <img src="img/screenshots/adobe-home-page.jpg" />
+            </div>
+            <div class="column half">
+              <h3>Analytics Maturity Assessment</h3>
+              <h4>Adobe</h4>
+              <h4 class="tag">Delivered</h4>
+              <h4>jQuery / CSS3 / jQuery Mobile</h4>
+            </div>
+          </div>
+          <div class="row clearfix">
+            <div class="column full">
+              <p>Built the Javascript MVC architecture from scratch, internationalization, whitelabeling, offline functionality, font support.</p>
+            </div>
+            <div class="column half">
+              <img src="img/screenshots/adobe-analytics1.png" />
+              <img src="img/screenshots/adobe-analytics2.png" />
+            </div>
+            <div class="column half">
+              <img src="img/screenshots/adobe-analytics3.png" />
+              <img src="img/screenshots/adobe-analytics4.png" />
+            </div>
+          </div>
+        </div>
+        <div class="modal-content" id="trr" v-show="modalType === 'trr'">
+          <div class="row clearfix">
+            <div class="column half">
+              <img src="img/screenshots/adobe-home-page.jpg" />
+            </div>
+            <div class="column half">
+              <h3>Analytics Maturity Assessment</h3>
+              <h4>Adobe</h4>
+              <h4 class="tag">Delivered</h4>
+              <h4>jQuery / CSS3 / jQuery Mobile</h4>
+            </div>
+          </div>
+          <div class="row clearfix">
+            <div class="column full">
+              <p>Built the Javascript MVC architecture from scratch, internationalization, whitelabeling, offline functionality, font support.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  
 </body>
 </html>

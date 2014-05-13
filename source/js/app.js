@@ -5,6 +5,12 @@ var model = {
 		  data: {
 		    modalOpen:false,
 		    modalType:false
+		  },
+		  methods:{
+		  	openModal: function(which){
+		  		model.vue.modalOpen = true;
+		  		model.vue.modalType = which;
+		  	}
 		  }
 		})
 	}
