@@ -365,6 +365,9 @@
     <div class="modal" v-show="modalOpen">
       <div class="modal-bg" data-open="{{modalOpen}}" v-on="click:modalOpen=false"></div>
       <div class="modal-container column three-fourth" data-open="{{modalOpen}}">
+        <div class="modal-close" v-on="click:modalOpen=false">
+          <i class="fa fa-times"></i>
+        </div>
         <div class="modal-content" id="adobe" v-show="modalType === 'adobe'">
           <div class="row clearfix">
             <div class="column half">
