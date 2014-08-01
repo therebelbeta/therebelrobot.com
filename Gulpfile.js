@@ -3,6 +3,8 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var less = require('gulp-less');
 var uncss = require('gulp-uncss');
+connect = require('gulp-connect');
+
 
 var paths = {
   scripts: {
@@ -10,7 +12,7 @@ var paths = {
       'source/js/**/*.js',
       '!source/js/lib/**'
     ],
-    lib:[
+    lib: [
       'bower_modules/jquery/dist/jquery.js',
       'bower_modules/vue/dist/vue.js',
       'bower_modules/smoothscroll/dist/smoothscroll.js',
@@ -19,17 +21,17 @@ var paths = {
     ]
   },
   styles: {
-    ourswatch:['source/less/**/*.less'],
-    ours:['source/less/main.less'],
-    lib:['source/less/lib/**/*.css']
+    ourswatch: ['source/less/**/*.less'],
+    ours: ['source/less/main.less'],
+    lib: ['source/less/lib/**/*.css']
   },
   images: 'source/img/**',
-  html:{
-    index:['source/index.html'],
-    templates:['source/templates/**/*.html'],
+  html: {
+    index: ['source/index.html'],
+    templates: ['source/templates/**/*.html'],
   },
-  fonts:['source/assets/fonts/**'],
-  misc:['source/assets/misc/**']
+  fonts: ['source/assets/fonts/**'],
+  misc: ['source/assets/misc/**']
 };
 
 gulp.task('scripts-ours', function() {
@@ -43,12 +45,12 @@ gulp.task('scripts-lib', function() {
     .pipe(concat("lib.js"))
     .pipe(gulp.dest('build/js'));
 });
-gulp.task('styles-ours', function () {
+gulp.task('styles-ours', function() {
   return gulp.src(paths.styles.ours)
     .pipe(less())
     .pipe(gulp.dest('build/css'));
 });
-gulp.task('styles-lib', function () {
+gulp.task('styles-lib', function() {
   // return gulp.src(paths.styles.lib)
   //   .pipe(uncss({
   //       html: [paths.html.index]
@@ -74,7 +76,11 @@ gulp.task('copy-misc', function() {
     .pipe(gulp.dest('build/misc'));
 });
 
-gulp.task('watch', function () {
+gulp.task('server', function() {
+  connect.server();
+});
+
+gulp.task('watch', function() {
   gulp.watch(paths.scripts.ours, ['scripts-ours']);
   gulp.watch(paths.scripts.lib, ['scripts-lib']);
   gulp.watch(paths.styles.ourswatch, ['styles-ours']);
@@ -85,14 +91,25 @@ gulp.task('watch', function () {
   gulp.watch(paths.misc, ['copy-misc']);
 });
 // The default task (called when you run `gulp`)
-gulp.task('default', [
-  'scripts-lib', 
-  'scripts-ours', 
+gulp.task('dev', [
+  'scripts-lib',
+  'scripts-ours',
   // 'styles-lib', 
-  'styles-ours', 
-  'copy-img', 
-  'copy-index', 
-  'copy-fonts', 
+  'styles-ours',
+  'copy-img',
+  'copy-index',
+  'copy-fonts',
   'copy-misc',
+  'server',
   'watch'
+]);
+gulp.task('default', [
+  'scripts-lib',
+  'scripts-ours',
+  // 'styles-lib', 
+  'styles-ours',
+  'copy-img',
+  'copy-index',
+  'copy-fonts',
+  'copy-misc'
 ]);

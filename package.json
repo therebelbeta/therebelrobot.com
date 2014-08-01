@@ -7,5 +7,8 @@
     "gulp": "~3.5.2",
     "gulp-less": "~1.2.1",
     "gulp-uncss": "^0.4.0"
+  },
+  "devDependencies": {
+    "gulp-connect": "^2.0.6"
   }
 }
