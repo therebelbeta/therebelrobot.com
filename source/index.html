@@ -98,12 +98,12 @@
           </div>
         </div>
         <div class="column half">
-          <div class="img grow" v-on="click:openModal('grow',this)">
+          <div class="img grow" v-on="click:openWindow('grow',this)">
             <div class="darken"></div>
             <h3>GROW</h3>
             <h4>NODE / ANGULAR / EXTERNAL APIs</h4>
           </div>
-          <div class="img moki" v-on="click:openModal('moki',this)">
+          <div class="img moki" v-on="click:openWindow('moki',this)">
             <div class="darken"></div>
             <h3>MOKI</h3>
             <h4>CSS3 / HTML5</h4>
@@ -119,11 +119,20 @@
             <h4>MONGO / SASS / ANGULAR / NODE</h4>
           </div>
         </div>
-        <div class="column full">
-          <div class="img trr" v-on="click:openModal('trr',this)">
+      </div>
+      <div class="row clearfix">
+        <div class="column half">
+          <div class="img trr" v-on="click:openWindow('trr',this)">
             <div class="darken"></div>
             <h3>THEREBELROBOT.COM</h3>
             <h4>LESS / VUE / NODE</h4>
+          </div>
+        </div>
+        <div class="column half">
+          <div class="img trr" v-on="click:openWindow('pnn',this)">
+            <div class="darken"></div>
+            <h3>PROVO NODE.JS NINJAS</h3>
+            <h4>CSS / HTML / BOOTSTRAP</h4>
           </div>
         </div>
       </div>
@@ -566,18 +575,43 @@
             </div>
             <div class="row clearfix">
               <div class="column half">
-                <img src="img/screenshots/nrf1.jpg" />
+              <div class="device-mockup imac">
+                <div class="device">
+                  <div class="screen">
+                    <img src="img/screenshots/nrf1.jpg" />
+                  </div>
+                </div>
+              </div>
+                
               </div>
               <div class="column half">
-                <img src="img/screenshots/nrf4.jpg" />
+              <div class="device-mockup imac">
+                <div class="device">
+                  <div class="screen">
+                    <img src="img/screenshots/nrf4.jpg" />
+                  </div>
+                </div>
+              </div>
               </div>
             </div>
             <div class="row clearfix">
               <div class="column half">
-                <img src="img/screenshots/nrf2.jpg" />
+              <div class="device-mockup iphone5 white">
+                <div class="device">
+                  <div class="screen">
+                    <img src="img/screenshots/nrf2.jpg" />
+                  </div>
+                </div>
+              </div>
               </div>
               <div class="column half">
-                <img src="img/screenshots/nrf3.jpg" />
+              <div class="device-mockup iphone5 white">
+                <div class="device">
+                  <div class="screen">
+                    <img src="img/screenshots/nrf3.jpg" />
+                  </div>
+                </div>
+              </div>
               </div>
             </div>
           </div>
